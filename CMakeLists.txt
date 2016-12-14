@@ -12,8 +12,9 @@ else(WIN32)
   
 endif(WIN32)
 
-add_executable(dualview_bridge Main.cpp)
+add_executable(dualview_bridge Main.cpp json.hpp)
 
 install(TARGETS dualview_bridge DESTINATION "/usr/local/bin")
 
-install(FILES dualview_bridge.json DESTINATION "/usr/share/mozilla/native-messaging-hosts/")
+install(FILES dualview_bridge.json PERMISSIONS WORLD_READ OWNER_WRITE OWNER_READ
+  DESTINATION "/usr/lib64/mozilla/native-messaging-hosts/")
