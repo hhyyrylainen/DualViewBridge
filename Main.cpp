@@ -76,6 +76,9 @@ class OutputPool{
 public:
     ~OutputPool(){
 
+        if(message.empty())
+            return;
+        
         SendInternal({
                 {"length", message.size()},
                 {"content", message} });
@@ -174,10 +177,6 @@ void StartDualViewProcess(std::string args){
         std::exit(1);
     }
 
-
-
-    // Parse args //
-    
     std::vector<const char*> startargs;
     startargs.push_back(progname);
 
