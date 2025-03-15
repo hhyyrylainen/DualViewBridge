@@ -1,9 +1,9 @@
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.5)
 
 project(DualViewBridge)
 
 if(WIN32)
-  
+  # TODO: win32 support
 else(WIN32)
 
   # Has to be on one line or else ';'s will be included
