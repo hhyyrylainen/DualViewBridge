@@ -3,5 +3,5 @@
   "description": "Host for passing messages to DualView++",
   "path": "/usr/local/bin/dualview_bridge",
   "type": "stdio",
-  "allowed_extensions": [ "dualview.webextension@boostslair.com" ]
+    "allowed_extensions": [ "dualview.webextension@boostslair.com", "dualview.webextension.self-hosted@boostslair.com" ]
 }
